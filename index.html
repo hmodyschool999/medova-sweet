@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Medova Sweet | ميدوفا للحلويات التركية الفاخرة</title>
+    <meta name="description" content="ميدوفا (Medova Sweet) يقدم أفخم الحلويات التركية، البقلاوة، الكنافة، وراحة الحلقوم. قطعة من تركيا وصلت أبو كبير بأعلى جودة.">
+    <meta name="keywords" content="حلويات تركية, بقلاوة تركية, كنافة, حلقوم تركي, ميدوفا للحلويات, أبو كبير, Medova Sweet">
+    <meta name="author" content="V.A.N.T">
+    
+    <meta property="og:title" content="Medova Sweet | ميدوفا للحلويات التركية الفاخرة">
+    <meta property="og:description" content="استعدوا لعظمة مش شبه أي حاجة. البصمة التركية الأصلية للحلويات الفاخرة وصلت أبو كبير.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Medova Sweet",
+      "image": "logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "شارع مصطفى كامل",
+        "addressLocality": "أبو كبير",
+        "addressCountry": "EG"
+      },
+      "url": "https://web.facebook.com/people/Medova-Sweets/61587271030118/",
+      "priceRange": "$$"
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* المتغيرات الأساسية للألوان */
+        :root {
+            --primary-gold: #d4af37;
+            --dark-gold: #b5952f;
+            --bg-dark: #0f0f0f;
+            --text-light: #f9f9f9;
+            --vant-green: #7bc063;
+            --vant-yellow: #f1cd45;
+            --vant-blue: #60a0d4;
+            --vant-orange: #f38d38;
+        }
+
+        /* إعادة ضبط الإعدادات الافتراضية */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* تحسين الخلفية العامة بـ Animated Gradient لمسة فخامة */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #050505, #1a150c, #050505);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* شريط التنقل (Navbar) مع تأثير Glassmorphism */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar .logo img {
+            height: 70px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: var(--primary-gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .btn-gold {
+            background: linear-gradient(45deg, var(--primary-gold), #e8c96b);
+            color: #000;
+            padding: 10px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+        }
+
+        /* القسم الرئيسي (Hero Section) مع تأثير Parallax خفيف */
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(15, 10, 0, 0.9)), url('https://images.unsplash.com/photo-1617300329949-a3b04cfa12f2?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* لتأثير البارالاكس */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', 'Cairo', serif;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        /* قسم المنتجات (Products Section) */
+        .products-section {
+            padding: 100px 5%;
+            text-align: center;
+            background-color: rgba(10, 10, 10, 0.6);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-gold);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: linear-gradient(145deg, #161616, #0d0d0d);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .img-container {
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 25px 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        .product-info p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        /* التذييل (Footer) */
+        .footer {
+            background-color: #030303;
+            padding: 60px 5% 30px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+        }
+
+        .footer-logo img {
+            height: 100px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
+        }
+
+        .footer-address {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        /* تصميم حقوق الملكية لـ V.A.N.T */
+        .vant-credit {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .vant-credit a {
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        /* ================= JS Animation Classes ================= */
+        .hidden-element {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .show-element {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* تأخير لظهور الكروت بشكل متسلسل */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.3s; }
+        .delay-3 { transition-delay: 0.5s; }
+        /* ======================================================== */
+
+        /* إعدادات الموبايل */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.2rem; }
+            .section-title { font-size: 2.2rem; }
+            .navbar .logo img { height: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Medova Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#menu">قائمة الحلويات</a></li>
+        </ul>
+        <a href="https://web.facebook.com/people/Medova-Sweets/61587271030118/" target="_blank" class="btn-gold">اطلب الآن</a>
+    </nav>
+
+    <header class="hero">
+        <h1 class="hidden-element">قطعة من تركيا</h1>
+        <p class="hidden-element delay-1">استعدوا لعظمة مش شبه أي حاجة قبل كده. البصمة التركية الأصلية للحلويات الفاخرة وصلت.</p>
+        <a href="https://web.facebook.com/people/Medova-Sweets/61587271030118/" target="_blank" class="btn-gold hidden-element delay-2">شوف أحدث عروضنا ومنتجاتنا</a>
+    </header>
+
+    <section id="menu" class="products-section">
+        <h2 class="section-title hidden-element">أفخم الحلويات</h2>
+        
+        <div class="products-grid">
+            
+            <div class="product-card hidden-element delay-1">
+                <div class="img-container">
+                    <img src="https://imgs.search.brave.com/SUWLhZt-zhQTjzFICpD6WYIMxQbSu5lVIFuiisNsceQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5lbGJhbGFkLm5l/d3MvMjAyNC8xMC9s/YXJnZS85NjMvNy82/MDAuanBn?w=800&auto=format&fit=crop" alt="بقلاوة تركية">
+                </div>
+                <div class="product-info">
+                    <h3>تشكيلة البقلاوة</h3>
+                    <p>أجود أنواع الفستق مع العجينة الرقيقة المحضرة على الطريقة العثمانية الأصيلة.</p>
+                </div>
+            </div>
+            
+            <div class="product-card hidden-element delay-2">
+                <div class="img-container">
+                    <img src="https://imgs.search.brave.com/7fjezRMJTnXZzf2yMxCf53U9zL8EIheoOQJdvc_SkuQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lZ2Y4/eHB4ank0Zy5leGFj/dGRuLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMi8wNC8l/RDglQTclRDklODQl/RDklODMlRDklODYl/RDglQTclRDklODEl/RDglQTktJUQ4JUE3/JUQ5JTg0JUQ4JUFB/JUQ4JUIxJUQ5JTgz/JUQ5JThBJUQ4JUE5/LWxhcmdlLndlYnA?w=800&auto=format&fit=crop" alt="كنافة تركية">
+                </div>
+                <div class="product-info">
+                    <h3>الكنافة والقهوة</h3>
+                    <p>استمتع بالمذاق الساحر للكنافة التركية مع فنجان من القهوة المقطرة بعناية.</p>
+                </div>
+            </div>
+            
+            <div class="product-card hidden-element delay-3">
+                <div class="img-container">
+                    <img src="https://imgs.search.brave.com/_3WaPig46pNE-B7jzqzYMz1-g43DSGtHZMvKLDGiXW8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lZ2Y4/eHB4ank0Zy5leGFj/dGRuLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMS8xMi8l/RDklODUlRDklODMl/RDklODglRDklODYl/RDglQTclRDglQUEt/JUQ4JUE3JUQ5JTg0/JUQ4JUFEJUQ5JTg0/JUQ5JTgyJUQ5JTg4/JUQ5JTg1LSVEOCVB/NyVEOSU4NCVEOCVB/QSVEOCVCMSVEOSU4/MyVEOSU4QS0xMDI0/eDY4My5qcGc_bG9z/c3k9MSZzc2w9MQ?w=800&auto=format&fit=crop" alt="عروض ميدوفا">
+                </div>
+                <div class="product-info">
+                    <h3>الحلقوم التركي</h3>
+                    <p>مجموعة فاخرة من راحة الحلقوم بأنواع ومكسرات مختلفة ترضي ذوقك الرفيع.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer hidden-element">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Medova Logo">
+        </div>
+        
+        <div class="footer-address">
+            📍 أبو كبير - شارع مصطفى كامل
+        </div>
+
+        <p>جميع الحقوق محفوظة © 2026 Medova Sweet</p>
+        
+        <div class="vant-credit">
+            Made by 
+            <a href="https://vanthq.net" target="_blank">
+                <span style="color: var(--vant-green);">V</span><span style="color: var(--text-light);">.</span><span style="color: var(--vant-yellow);">A</span><span style="color: var(--text-light);">.</span><span style="color: var(--vant-blue);">N</span><span style="color: var(--text-light);">.</span><span style="color: var(--vant-orange);">T</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // استخدام Intersection Observer لمراقبة العناصر أثناء التمرير
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // يظهر العنصر عندما يدخل 15% منه في الشاشة
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-element');
+                        // إيقاف مراقبة العنصر بعد ظهوره لتخفيف الحمل على المتصفح
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            // تحديد جميع العناصر التي تحتوي على كلاس hidden-element ومراقبتها
+            const hiddenElements = document.querySelectorAll('.hidden-element');
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+    </body>
+</html>
